@@ -42,17 +42,13 @@ Data transformation means changing data into a format that’s easier to work wi
 df = df.chat('convert species names to numeric codes')
 ```
 
-```python
  <img src="#">
-```
 
 ```python
 df = df.chat('add a new column "petal_area" calculated as petal_length * petal_width')
 ```
 
-```python
 <img src="#">
-```
 
 ## Data analysis
 Data analysis involves examining data to find useful patterns or insights. In DataHorse, data analysis involves using natural language to interact with and understand your data. Instead of writing complex code, you can ask questions and get insights directly. This simplifies finding patterns and making decisions from your data.
@@ -63,25 +59,19 @@ Data analysis involves examining data to find useful patterns or insights. In Da
 average_measurements = df.chat('what are the average sepal length and petal width for each species?')
 ```
 
-```python
 <img src="#">
-```
 
 ```python
 species_count = df.chat('how many samples are there for each species?')
 ```
 
-```python
 <img src="#">
-```
 
 ```python
 largest_petal_length = df.chat('which species has the largest petal length?')
 ```
 
-```python
 <img src="#">
-```
 
 ## Data visualization
 Data visualization with DataHorse means turning data into easy-to-understand charts and graphs using simple language. Instead of just numbers, DataHorse creates clear visuals that highlight patterns and trends, making it simpler to understand and analyze the information quickly.
@@ -91,38 +81,29 @@ Data visualization with DataHorse means turning data into easy-to-understand cha
 df.chat('Display a pair plot that shows scatter plots for each pair of features and includes color-coding by species.')
 ```
 
-```python
 <img src="#">
-```
 
 ```python
 df.chat('Show a pair plot that includes scatter plots for each pair of features, and histograms along the diagonal to show the distribution of each feature.')
 ```
 
-```python
 <img src="#">
-```
 
 ```python
 df.chat('scatter plot of sepal length vs petal length by species')
 ```
 
-```python
 <img src="#">
-```
 
 ```python
 df.chat('histogram of petal width')
 ```
 
-```python
 <img src="#">
-```
 
 ```python
 df.chat('box plot of sepal length distribution by species')
 ```
 
-```python
 <img src="#">
-```
+
