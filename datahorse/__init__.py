@@ -5,7 +5,7 @@ verbose = False
 mutable = False 
 
 model = 'llama3-8b-8192'
-groq_api_key = "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"
+groq_api_key = os.getenv('DATAHORSE_API_KEY')
 client = Groq(api_key=groq_api_key)
 
 template = '''
