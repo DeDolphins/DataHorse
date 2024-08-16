@@ -81,29 +81,23 @@ Data visualization with DataHorse means turning data into easy-to-understand cha
 df.chat('Display a pair plot that shows scatter plots for each pair of features and includes color-coding by species.')
 ```
 
-<img src="#">
+<img src="images/pair_scatter_plots.png">
 
 ```python
 df.chat('Show a pair plot that includes scatter plots for each pair of features, and histograms along the diagonal to show the distribution of each feature.')
 ```
 
-<img src="#">
+<img src="images/scatter_histograms.png">
 
 ```python
 df.chat('scatter plot of sepal length vs petal length by species')
 ```
 
-<img src="#">
-
-```python
-df.chat('histogram of petal width')
-```
-
-<img src="#">
+<img src="images/scatter_plot.png">
 
 ```python
 df.chat('box plot of sepal length distribution by species')
 ```
 
-<img src="#">
+<img src="images/box_plot.png">
 
