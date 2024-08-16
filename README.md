@@ -42,13 +42,13 @@ Data transformation means changing data into a format that’s easier to work wi
 df = df.chat('convert species names to numeric codes')
 ```
 
- <img src="#">
+ <img src="images/Species names to numeric codes.jpeg">
 
 ```python
 df = df.chat('add a new column "petal_area" calculated as petal_length * petal_width')
 ```
 
-<img src="#">
+<img src="images/petal_area.jpeg">
 
 ## Data analysis
 Data analysis involves examining data to find useful patterns or insights. In DataHorse, data analysis involves using natural language to interact with and understand your data. Instead of writing complex code, you can ask questions and get insights directly. This simplifies finding patterns and making decisions from your data.
