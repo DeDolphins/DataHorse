@@ -59,19 +59,14 @@ Data analysis involves examining data to find useful patterns or insights. In Da
 average_measurements = df.chat('what are the average sepal length and petal width for each species?')
 ```
 
-<img src="#">
+<img src="images/avarage.jpeg">
 
 ```python
 species_count = df.chat('how many samples are there for each species?')
 ```
 
-<img src="#">
+<img src="images/simple_of_each.jpeg">
 
-```python
-largest_petal_length = df.chat('which species has the largest petal length?')
-```
-
-<img src="#">
 
 ## Data visualization
 Data visualization with DataHorse means turning data into easy-to-understand charts and graphs using simple language. Instead of just numbers, DataHorse creates clear visuals that highlight patterns and trends, making it simpler to understand and analyze the information quickly.
