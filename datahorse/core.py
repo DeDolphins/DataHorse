@@ -138,4 +138,23 @@ class AskAccessor:
 
 
 def read(file_path):
-    return pd.read_csv(file_path)
+    try:
+        return pd.read_csv(file_path)
+    except UnicodeDecodeError:
+        try:
+            return pd.read_csv(file_path, encoding='utf-8')
+        except Exception as e:
+            print(f"Failed to read file with 'utf-8' encoding: {e}")
+            return None
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' was not found.")
+        return None
+    except pd.errors.EmptyDataError:
+        print("Error: The file is empty.")
+        return None
+    except pd.errors.ParserError:
+        print("Error: There was a problem parsing the file.")
+        return None
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return None
