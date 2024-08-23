@@ -44,11 +44,6 @@ df = df.chat('convert species names to numeric codes')
 
  <img src="images/Species names to numeric codes.jpeg">
 
-```python
-df = df.chat('add a new column "petal_area" calculated as petal_length * petal_width')
-```
-
-<img src="images/petal_area.jpeg">
 
 ## Data analysis
 Data analysis involves examining data to find useful patterns or insights. In DataHorse, data analysis involves using natural language to interact with and understand your data. Instead of writing complex code, you can ask questions and get insights directly. This simplifies finding patterns and making decisions from your data.
@@ -60,12 +55,6 @@ average_measurements = df.chat('what are the average sepal length and petal widt
 ```
 
 <img src="images/avarage.jpeg">
-
-```python
-species_count = df.chat('how many samples are there for each species?')
-```
-
-<img src="images/simple_of_each.jpeg">
 
 
 ## Data visualization
@@ -83,18 +72,6 @@ df.chat('Show a pair plot that includes scatter plots for each pair of features,
 ```
 
 <img src="images/scatter_histograms.png">
-
-```python
-df.chat('scatter plot of sepal length vs petal length by species')
-```
-
-<img src="images/scatter_plot.png">
-
-```python
-df.chat('box plot of sepal length distribution by species')
-```
-
-<img src="images/box_plot.png">
 
 ## Contribute
 
