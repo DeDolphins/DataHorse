@@ -96,3 +96,12 @@ df.chat('box plot of sepal length distribution by species')
 
 <img src="images/box_plot.png">
 
+## Contribute
+
+Found a bug or have an improvement in mind? Fantastic!
+
+Got a solution ready? That's even better!
+
+Ready to share it with us? We're all ears!
+
+Start at the [contributing guide](https://matplotlib.org/devdocs/devel/contribute.md)!
