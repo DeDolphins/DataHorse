@@ -104,4 +104,4 @@ Got a solution ready? That's even better!
 
 Ready to share it with us? We're all ears!
 
-Start at the [contributing guide](https://matplotlib.org/devdocs/devel/contribute.md)!
+Start at the [contributing guide](https://github.com/DeDolphins/DataHorse/blob/main/CONTRIBUTION.md)!
