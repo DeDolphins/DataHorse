@@ -139,10 +139,18 @@ class AskAccessor:
 
 def read(file_path):
     try:
-        return pd.read_csv(file_path)
+        # Check the file extension to determine the file type
+        if file_path.lower().endswith('.xlsx') or file_path.lower().endswith('.xls'):
+            # Attempt to read an Excel file
+            return pd.read_excel(file_path)
+        else:
+            # Attempt to read a CSV file
+            return pd.read_csv(file_path)
     except UnicodeDecodeError:
         try:
-            return pd.read_csv(file_path, encoding='utf-8')
+            # Retry reading the CSV file with 'utf-8' encoding
+            if not (file_path.lower().endswith('.xlsx') or file_path.lower().endswith('.xls')):
+                return pd.read_csv(file_path, encoding='utf-8')
         except Exception as e:
             print(f"Failed to read file with 'utf-8' encoding: {e}")
             return None
