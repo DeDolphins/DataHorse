@@ -36,69 +36,99 @@ class Ask:
         return result
 
     def _get_prompt(self, goal, arg):
-        if isinstance(arg, pd.DataFrame) or isinstance(arg, pd.Series):
-            import io
-            buf = io.StringIO()
-            arg.info(buf=buf)
-            arg_summary = buf.getvalue()
-        else:
-            arg_summary = repr(arg)
-        arg_name = 'df' if isinstance(arg, pd.DataFrame) else 'index' if isinstance(arg, pd.Index) else 'data'
+        try:
+            if isinstance(arg, pd.DataFrame) or isinstance(arg, pd.Series):
+                import io
+                buf = io.StringIO()
+                arg.info(buf=buf)
+                arg_summary = buf.getvalue()
+            else:
+                arg_summary = repr(arg)
+            arg_name = 'df' if isinstance(arg, pd.DataFrame) else 'index' if isinstance(arg, pd.Index) else 'data'
 
-        return self._fill_template(template, arg_name=arg_name, arg=arg_summary.strip(), goal=goal.strip())
+            return self._fill_template(template, arg_name=arg_name, arg=arg_summary.strip(), goal=goal.strip())
+        except Exception as e:
+            print("Please modify your prompt")
+            return ""
 
     def _run_prompt(self, prompt):
-        cache = _ask_cache
-        completion = cache.get(prompt) or client.chat.completions.create(
-            messages=[
-                {
-                    "role": "system",
-                    "content": "Write the function in a Python code block with all necessary imports and no example usage.",
-                },
-                {
-                    "role": "user",
-                    "content": prompt,
-                },
-            ],
-            model=model,
-        )
-        cache[prompt] = completion
-        return completion.choices[0].message.content
+        try:
+            cache = _ask_cache
+            completion = cache.get(prompt) or client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "Write the function in a Python code block with all necessary imports and no example usage.",
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt,
+                    },
+                ],
+                model=model,
+            )
+            cache[prompt] = completion
+            return completion.choices[0].message.content
+        except Exception as e:
+            print("Please modify your prompt")
+            return ""
 
     def _extract_code_block(self, text):
-        import re
-        pattern = r'```(\s*(py|python)\s*\n)?([\s\S]*?)```'
-        m = re.search(pattern, text)
-        if not m:
-            return text
-        return m.group(3)
+        try:
+            import re
+            pattern = r'```(\s*(py|python)\s*\n)?([\s\S]*?)```'
+            m = re.search(pattern, text)
+            if not m:
+                return text
+            return m.group(3)
+        except Exception as e:
+            print("Please modify your prompt")
+            return ""
 
     def _eval(self, source, *args):
-        _args_ = args
-        scope = dict(_args_=args)
-        exec(self._fill_template('''
-            {source}
-            _result_ = process(*_args_)
-        ''', source=source), scope)
-        return scope['_result_']
+        try:
+            _args_ = args
+            scope = dict(_args_=args)
+            exec(self._fill_template('''
+                {source}
+                _result_ = process(*_args_)
+            ''', source=source), scope)
+            return scope['_result_']
+        except Exception as e:
+            print("Please modify your prompt")
+            return None
 
     def _code(self, goal, arg):
-        prompt = self._get_prompt(goal, arg)
-        result = self._run_prompt(prompt)
-        if self.verbose:
-            print()
-            print(result)
-        return self._extract_code_block(result)
+        try:
+            prompt = self._get_prompt(goal, arg)
+            result = self._run_prompt(prompt)
+            if self.verbose:
+                print()
+                print(result)
+            return self._extract_code_block(result)
+        except Exception as e:
+            print("Please modify your prompt")
+            return ""
 
     def code(self, *args):
-        print(self._code(*args))
+        try:
+            print(self._code(*args))
+        except Exception as e:
+            print("Please modify your prompt")
 
     def prompt(self, *args):
-        print(self._get_prompt(*args))
+        try:
+            print(self._get_prompt(*args))
+        except Exception as e:
+            print("Please modify your prompt")
 
     def __call__(self, goal, *args):
-        source = self._code(goal, *args)
-        return self._eval(source, *args)
+        try:
+            source = self._code(goal, *args)
+            return self._eval(source, *args)
+        except Exception as e:
+            print("Please modify your prompt")
+            return None
 
 
 @pd.api.extensions.register_dataframe_accessor('chat')
