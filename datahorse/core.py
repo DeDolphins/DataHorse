@@ -1,6 +1,6 @@
 import pandas as pd
 from groq import Groq
-
+from logger import Logger
 verbose = False 
 mutable = False 
 
@@ -102,9 +102,9 @@ class Ask:
         try:
             prompt = self._get_prompt(goal, arg)
             result = self._run_prompt(prompt)
-            if self.verbose:
-                print()
-                print(result)
+            #review the code
+            review = self._extract_code_block(result)
+            Logger().log({"title": "Review Code", "details": review})
             return self._extract_code_block(result)
         except Exception as e:
             print("Please modify your prompt")
