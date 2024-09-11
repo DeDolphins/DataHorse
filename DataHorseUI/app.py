@@ -311,6 +311,8 @@ def main_code():
             head = st.session_state.history[i]
             # st.text_area(f"Cell{i}", value=head, height=30)
             st.subheader(f'Output No {i+1}')
+            with st.expander("Review the Code", expanded=False):
+                st.code(code)
             st.code(head)
             
             code = extract_code_from_result(code)
