@@ -47,7 +47,7 @@ df = df.chat('convert species names to numeric codes')
 ```python
 df = df.chat('convert species names to numeric codes', seed=int, cache_req=True)
 ```
-<img src="demo/datahorseLibrary.gif">
+<img src="demo/DatahorseLibrary.gif">
 
 
 # Guide for running the DataHorse WebUI
