@@ -64,6 +64,13 @@ pip install -r requirements.text
 streamlit run app.py
 ```
 <img src="demo/datahorseUI.gif">
+Please support the work by giving the repository a star, contributing to it, or 
+
+[follow us on LinkedIn](https://www.linkedin.com/showcase/data-horse/)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=DeDolphins/DataHorse&type=Date)](https://star-history.com/#DeDolphins/DataHorse&Date)
 
 ## Contribute
 
