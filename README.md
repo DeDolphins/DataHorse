@@ -47,36 +47,8 @@ df = df.chat('convert species names to numeric codes')
 ```python
 df = df.chat('convert species names to numeric codes', seed=int, cache_req=True)
 ```
- <img src="images/Species names to numeric codes.jpeg">
+<img src="demo/datahorseLibrary.gif">
 
-
-## Data analysis
-Data analysis involves examining data to find useful patterns or insights. In DataHorse, data analysis involves using natural language to interact with and understand your data. Instead of writing complex code, you can ask questions and get insights directly. This simplifies finding patterns and making decisions from your data.
-
-# Queries
-
-```python
-average_measurements = df.chat('what are the average sepal length and petal width for each species?')
-```
-
-<img src="images/avarage.jpeg">
-
-
-## Data visualization
-Data visualization with DataHorse means turning data into easy-to-understand charts and graphs using simple language. Instead of just numbers, DataHorse creates clear visuals that highlight patterns and trends, making it simpler to understand and analyze the information quickly.
-
-# Plotting
-```python
-df.chat('Display a pair plot that shows scatter plots for each pair of features and includes color-coding by species.')
-```
-
-<img src="images/pair_scatter_plots.png">
-
-```python
-df.chat('Show a pair plot that includes scatter plots for each pair of features, and histograms along the diagonal to show the distribution of each feature.')
-```
-
-<img src="images/scatter_histograms.png">
 
 # Guide for running the DataHorse WebUI
 ## Clone the repository
