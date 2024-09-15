@@ -41,7 +41,12 @@ Data transformation means changing data into a format that’s easier to work wi
 ```python
 df = df.chat('convert species names to numeric codes')
 ```
+- `seed=int`: Ensures that the generated function is reproducible across different runs.
+- `cache_req=True`: Enables caching for the API request, ensuring that identical prompts won't trigger unnecessary API calls.
 
+```python
+df = df.chat('convert species names to numeric codes', seed=int, cache_req=True)
+```
  <img src="images/Species names to numeric codes.jpeg">
 
 
@@ -73,6 +78,24 @@ df.chat('Show a pair plot that includes scatter plots for each pair of features,
 
 <img src="images/scatter_histograms.png">
 
+# Guide for running the DataHorse WebUI
+## Clone the repository
+```bash
+git clone https://github.com/DeDolphins/DataHorse.git
+```
+## Go to the directory
+```bash
+cd DataHorseUI
+```
+## Install the requirements
+```bash
+pip install -r requirements.text
+```
+## Run DataHorse WebUI
+```bash
+streamlit run app.py
+```
+[Watch the video](demo/datahorseUI.mp4)
 ## Contribute
 
 Found a bug or have an improvement in mind? Fantastic!
