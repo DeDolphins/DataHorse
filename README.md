@@ -34,10 +34,6 @@ import datahorse
 
 df = datahorse.read('https://raw.githubusercontent.com/plotly/datasets/master/iris-data.csv')
 ```
-
-## Data transformation
-Data transformation means changing data into a format that’s easier to work with. This can involve fixing errors, combining data, standardizing formats, or changing how data is organized. It helps make sure data is clean, consistent, and ready for analysis or other uses.
-
 ```python
 df = df.chat('convert species names to numeric codes')
 ```
