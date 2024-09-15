@@ -34,44 +34,36 @@ import datahorse
 
 df = datahorse.read('https://raw.githubusercontent.com/plotly/datasets/master/iris-data.csv')
 ```
-
-## Data transformation
-Data transformation means changing data into a format that’s easier to work with. This can involve fixing errors, combining data, standardizing formats, or changing how data is organized. It helps make sure data is clean, consistent, and ready for analysis or other uses.
-
 ```python
 df = df.chat('convert species names to numeric codes')
 ```
-
- <img src="images/Species names to numeric codes.jpeg">
-
-
-## Data analysis
-Data analysis involves examining data to find useful patterns or insights. In DataHorse, data analysis involves using natural language to interact with and understand your data. Instead of writing complex code, you can ask questions and get insights directly. This simplifies finding patterns and making decisions from your data.
-
-# Queries
+- `seed=int`: Ensures that the generated function is reproducible across different runs.
+- `cache_req=True`: Enables caching for the API request, ensuring that identical prompts won't trigger unnecessary API calls.
 
 ```python
-average_measurements = df.chat('what are the average sepal length and petal width for each species?')
+df = df.chat('convert species names to numeric codes', seed=int, cache_req=True)
 ```
+<img src="demo/DatahorseLibrary.gif">
 
-<img src="images/avarage.jpeg">
 
-
-## Data visualization
-Data visualization with DataHorse means turning data into easy-to-understand charts and graphs using simple language. Instead of just numbers, DataHorse creates clear visuals that highlight patterns and trends, making it simpler to understand and analyze the information quickly.
-
-# Plotting
-```python
-df.chat('Display a pair plot that shows scatter plots for each pair of features and includes color-coding by species.')
+# Guide for running the DataHorse WebUI
+## Clone the repository
+```bash
+git clone https://github.com/DeDolphins/DataHorse.git
 ```
-
-<img src="images/pair_scatter_plots.png">
-
-```python
-df.chat('Show a pair plot that includes scatter plots for each pair of features, and histograms along the diagonal to show the distribution of each feature.')
+## Go to the directory
+```bash
+cd DataHorseUI
 ```
-
-<img src="images/scatter_histograms.png">
+## Install the requirements
+```bash
+pip install -r requirements.text
+```
+## Run DataHorse WebUI
+```bash
+streamlit run app.py
+```
+<img src="demo/datahorseUI.gif">
 
 ## Contribute
 
