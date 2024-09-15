@@ -95,7 +95,8 @@ pip install -r requirements.text
 ```bash
 streamlit run app.py
 ```
-[Watch the video](demo/datahorseUI.mp4)
+<img src="demo/datahorseUI.gif">
+
 ## Contribute
 
 Found a bug or have an improvement in mind? Fantastic!
