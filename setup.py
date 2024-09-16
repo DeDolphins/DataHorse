@@ -41,6 +41,10 @@ readme = read_file(["README.md"])
 required_packages = [
     "pandas",
     "groq",
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn"
 ]
 
 extras = {
