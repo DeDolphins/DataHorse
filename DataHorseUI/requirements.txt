@@ -1,0 +1,11 @@
+streamlit
+streamlit_cookies_manager
+pymongo
+streamlit_option_menu
+pandas
+groq
+matplotlib
+seaborn
+scikit-learn
+plotly
+Pillow
