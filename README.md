@@ -5,7 +5,7 @@
     <img src="image.png" height="">
   </a>
   <h1 align="center">
-    <a href="https://datahorse.ai/">DataHorse</a>
+    <a href="https://github.com/DeDolphins/DataHorse">⭐️ Star DataHorse</a>
   </h1>
 </p>
 
@@ -69,6 +69,7 @@ Please support the work by giving the repository a star, contributing to it, or
 [follow us on LinkedIn](https://www.linkedin.com/showcase/data-horse/)
 
 ## Star History
+⭐️ Star DataHorse to increase our visibility
 
 [![Star History Chart](https://api.star-history.com/svg?repos=DeDolphins/DataHorse&type=Date)](https://star-history.com/#DeDolphins/DataHorse&Date)
 
