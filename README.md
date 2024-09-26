@@ -44,11 +44,11 @@ df = df.chat('convert species names to numeric codes')
 df = df.chat('convert species names to numeric codes', seed=int, cache_req=True)
 ```
 
-# Model training
+## Model training
 ```python
 df.chat('train a classification model and save the model')
 ```
-# Model testing
+## Model testing
 ```python
 datahorse.test("path of the saved model",[["list of testing features"]])
 ```
