@@ -52,6 +52,7 @@ df.chat('train a classification model and save the model')
 ```python
 datahorse.test("path of the saved model",[["list of testing features"]])
 ```
+## Library Demo
 <img src="demo/DatahorseLibrary.gif">
 
 
@@ -72,6 +73,7 @@ pip install -r requirements.text
 ```bash
 streamlit run app.py
 ```
+## WebUI Demo
 <img src="demo/datahorseUI.gif">
 Please support the work by giving the repository a star, contributing to it, or 
 
