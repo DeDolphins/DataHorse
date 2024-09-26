@@ -43,6 +43,15 @@ df = df.chat('convert species names to numeric codes')
 ```python
 df = df.chat('convert species names to numeric codes', seed=int, cache_req=True)
 ```
+
+# Model training
+```python
+df.chat('train a classification model and save the model')
+```
+# Model testing
+```python
+datahorse.test("path of the saved model",[["list of testing features"]])
+```
 <img src="demo/DatahorseLibrary.gif">
 
 
