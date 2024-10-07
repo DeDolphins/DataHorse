@@ -1,0 +1,12 @@
+Hello DataHorse Team,
+
+I would like to suggest two features to improve DataHorse:
+
+1- Automated Data Cleaning: Implement an automated data cleaning feature that prompts users with questions about handling missing values or duplicates upon uploading datasets.
+2- AI Assistant Integration: Integrate an AI assistant to provide real-time support, answer queries, and guide users through data analysis tasks.
+If you find these ideas helpful, I would love to collaborate further and kindly request you to accept my pull request.
+
+Thank you!
+
+Best,
+Rajesh
