@@ -25,7 +25,7 @@ pip install datahorse
 ```
 
 ## Examples
-We’re using an Irish dataset as an example to demonstrate how DataHorse simplifies data analysis. This example showcases how our tool can handle real-world data, making it easier to work with and understand.
+We’re using the [Iris flower dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) as an example to demonstrate how DataHorse simplifies data analysis. This example showcases how our tool can handle real-world data, making it easier to work with and understand.
 
 Setup and usage examples are available in this **[Google Colab notebook](https://colab.research.google.com/drive/1brAw2Qj_VnlTbzcfjm5sCOaQbNl7Disd?usp=sharing)**.
 
