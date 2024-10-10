@@ -1,5 +1,5 @@
 import pandas as pd
-from groq import Groq
+from datahorseclient import DataHorse
 from .logger import Logger
 import hashlib
 import os
@@ -7,8 +7,8 @@ import os
 verbose = False
 mutable = False
 model = 'llama3-8b-8192'
-groq_api_key = os.getenv("DATAHORSE_API_KEY")
-client = Groq(api_key=groq_api_key)
+DataHorse_api_key = os.getenv("DATAHORSE_API_KEY")
+client = DataHorse(api_key=DataHorse_api_key)
 
 template = '''
 Write a Python function process({arg_name}) which takes the following input value:

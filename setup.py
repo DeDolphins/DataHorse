@@ -40,8 +40,8 @@ readme = read_file(["README.md"])
 # Include only pandas and groq
 required_packages = [
     "pandas",
-    "groq",
     "numpy",
+    "datahorseclient"
     "matplotlib",
     "seaborn",
     "scikit-learn"
